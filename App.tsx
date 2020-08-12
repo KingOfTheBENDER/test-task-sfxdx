@@ -7,7 +7,7 @@ import dataSaga from './src/redux/saga/index';
 import RootScreen from './src/screens/RootScreen';
 
 const sagaMiddleware = createSagaMiddleware();
-//Описать combinedReducers and dataSaga и RootScreen
+
 function configureStore() {
   const store = createStore(combinedReducers,applyMiddleware(sagaMiddleware))
   sagaMiddleware.run(dataSaga)
